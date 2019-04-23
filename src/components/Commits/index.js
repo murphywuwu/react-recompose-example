@@ -34,7 +34,7 @@ type CommitsMapItem = {
 //     }
 //   })
 // });
-
+// 定义高阶组件
 const withLoading : Function = Component => props => {
   console.log(props.commitsNumber);
   if (props.data.loading) {

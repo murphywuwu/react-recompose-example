@@ -1,7 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
 // import configureStore from './config/store'
-import { Provider } from 'react-redux'
 import ApolloClient, { createNetworkInterface } from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
 import Root from './root.js'

@@ -100,6 +100,7 @@ const productionConfig = {
 };
 
 const developmentConfig = {
+  devtool: "eval-source-map",
   devServer: {
     historyApiFallback: true,
     hotOnly: true,
@@ -112,13 +113,7 @@ const developmentConfig = {
       {
         test: /\.css$/, // Transform all .css files required somewhere within an entry point...
         use: [
-					'style-loader',
-				  {
-						loader: 'css-loader',
-						options: {
-							modules: true,
-						},
-					},
+					'style-loader', 'css-loader'
 				],
       },
     ],

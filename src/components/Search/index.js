@@ -12,10 +12,12 @@ import type SearchProps from './typings.js';
 
 type SearchPropsInner = SearchProps;
 
+// 定义组件的state, 以及change state的函数
 const withOwnerInState : Function = withState('owner', 'setOwner', '');
 const withRepoInState : Function = withState('repo', 'setRepo', '');
 const withCommitsInState : Function = withState('commitsNumber', 'setCommitsNumber', 0);
 
+// 定义curry化的handler(可事前注入state和change state的函数以及props)
 const withExtendedHandlers : Function = withHandlers({
   handleOwnerInputValue : ({
     owner,
